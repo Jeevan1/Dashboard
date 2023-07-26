@@ -1,0 +1,24 @@
+.nav{
+    height: 50px;
+    width: 98%;
+    margin: auto;
+    // background-color: rgb(234, 236, 237); 
+    .nav-items{
+        .nav-link{
+            font-size: 14px;
+            padding-right: 0;
+            padding-left: 5px;
+            &::after{
+                content: " /";
+                padding-left: 5px;
+            }
+            &:last-child{
+                color: black;
+                &::after{
+                    content: "";
+                    
+                }
+            }
+        }
+    }
+}

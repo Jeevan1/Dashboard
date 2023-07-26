@@ -1,0 +1,211 @@
+.TodoList {
+    &-1 {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-top {
+            &>div {
+                font-weight: 500;
+                
+                // padding: 5px;
+                .icon {
+                    font-size: 18px;
+                }
+
+                &>div {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 20px 0;
+                    font-size: 14px;
+                }
+            }
+
+            &-1 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+            }
+
+            &-2 {
+                .note-nav {
+                    padding: 10px;
+                    margin: 5px 0;
+                    transition: 0.3s;
+                    border-radius: 7px;
+                    display: flex;
+                    justify-content: space-between;
+                    &:hover{
+                        padding-left: 15px;
+                        background-color: lightgray;
+                    }
+                    &>div{
+                        gap: 10px;
+                    }
+                    span{
+                        width: 25px;
+                        text-align: center;
+                        border-radius: 5px;
+                        background-color: rgba($color: blue, $alpha: 0.1);
+                    }
+                }
+
+                .active {
+                    background-color: lightgray;
+                    border-radius: 7px;
+                    color: blue;
+                }
+            }
+            &-3 {
+                .note-nav {
+                    padding: 10px;
+                    margin: 5px 0;
+                    transition: 0.3s;
+                    border-radius: 7px;
+                    &:hover{
+                        padding-left: 15px;
+                        background-color: lightgray;
+                    }
+                }
+
+                .active {
+                    background-color: lightgray;
+                    border-radius: 7px;
+                    color: blue;
+                }
+            }
+        }
+
+        &-bottom {
+            font-size: 14px;
+        }
+    }
+    &-2{
+        .todo-topbar{
+            &-1{
+
+            }
+            &-2{
+                p{
+                    font-size: 14px;
+                    font-weight: 600;
+                    opacity: 0.7;
+                }
+                .icon{
+                    font-size: 25px;
+                    padding: 5px;
+                    font-weight: 900;
+                    cursor: pointer;
+                }
+            }
+            @media(max-width: 500px){
+                &-1{
+                    .search{
+                        width: auto !important
+                    }
+                }
+                &-2{
+                    p{
+                        font-size: 12px;
+                    }
+                    .icon{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .todo-item{
+            &-1{
+                input{
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+            &-2{
+                p:hover{
+                    color: blue;
+                }
+                small{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                }
+            }
+            &-4{
+                del{
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+            &-5{
+                img{
+                    height: 35px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+            &-6{
+                .icon{
+                    font-size: 20px;
+                }
+            }
+            @media(max-width: 430px){
+                .row{
+                    &>div{
+                        gap: 15px !important;
+                    }
+                    .todo-item-4{
+                        display: none;
+                        del{
+                            display: none;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: 1000px){
+        &-2{
+            padding: 0 !important;
+        }
+    }
+}
+
+.add-task-form {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .form-wrapper {
+        width: 30%;
+        position: absolute;
+        background-color: white;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+        .form-control {
+            &:focus{
+                outline: hidden;
+            }
+        }
+        .remove-icon{
+            cursor: pointer;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}

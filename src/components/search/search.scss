@@ -1,0 +1,14 @@
+.search{
+    input{
+        outline: none;
+        border: none;
+        background-color: inherit;
+        &::placeholder{
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+    .icon{
+        color: gray;
+    }
+}

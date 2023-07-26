@@ -1,0 +1,66 @@
+.callender {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &__1 {
+        button {
+            height: 35px;
+            background-color: transparent;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .type {
+            p {
+                font-size: 13px;
+                font-weight: 400;
+
+                span {
+                    display: inline-block;
+                    min-width: 10px;
+                    min-height: 10px;
+                    background-color: antiquewhite;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .icon {
+            height: 35px;
+            width: 35px;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        button.active{
+            background-color: blue !important;
+            color: white;
+            // border: none !important;
+        }
+        button:hover{
+            background-color: blue !important;
+            color: white;
+            // border: none !important;
+        }
+    }
+    &__2{
+        .callenderCss{
+            button.active{
+                background-color: blue !important;
+                color: white;
+                // border: none !important;
+            }
+            button:hover{
+                background-color: blue !important;
+                color: white;
+                // border: none !important;
+            }
+
+            .rbc-header{
+                padding: 10px 0;
+                background-color: rgb(235, 235, 245);
+            }
+        }
+    }
+}

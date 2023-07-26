@@ -1,0 +1,54 @@
+.home {
+   overflow: hidden;
+   box-sizing: border-box;
+   height: 100vh;
+   width: 100vw;
+ }
+
+ 
+ .leftMenu {
+   height: 100%;
+   position: sticky;
+   width: 0%;
+   top: 0;
+   overflow-y: scroll;
+   transition: width 0.9s;
+   &::-webkit-scrollbar {
+     display: none;
+   }
+ }
+ 
+ .show {
+   width: 100%;
+   animation: slide 0.9s;
+ }
+ 
+ @keyframes slide {
+   from {
+     width: 0%;
+   }
+ 
+   to {
+     width: 300px;
+   }
+ }
+ 
+ .rightComponent {
+   height: 100%;
+   width: 100%;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   transition: width 1s;
+   &::-webkit-scrollbar {
+     display: none;
+   }
+ }
+ 
+ /* Hide scrollbars for the whole document */
+ body::-webkit-scrollbar {
+   display: none;
+   .no-show{
+      width: 100%;
+   }
+ }
+ 

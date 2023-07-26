@@ -1,0 +1,128 @@
+.mobile-menu{
+    padding: 5px 0px;
+    // overflow-y: scroll;
+    .container-fluid{
+        padding: 0;
+        // width: 300px;
+        position: relative;
+        .menu-1{
+            height: 50px;
+        //    width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            background-color: white;
+            top: 0;
+            z-index: 999;
+            img{
+                height: 50px;
+                object-fit: cover;
+            }
+            .menu-icon{
+                cursor: pointer;
+            }
+        }
+        .menu-2{
+            .heading{
+                .left{
+                    .icon{
+                        font-size: 22px;
+                        cursor: pointer;
+                    }
+                }
+                .right{
+                    cursor: pointer;
+                }
+            }
+            .data{
+                margin: 0;
+                padding: 0;
+                height: 0;
+                overflow: hidden;
+                // transition: height 0.9s ease-in-out;
+                p{
+                    width: 270px;
+                    margin: auto;
+                    font-size: 13px;
+                    padding: 10px 15px;
+                    cursor: pointer;
+                     &:hover {
+                        color: rgb(78, 78, 240);
+                        background-color: rgb(234, 230, 230);
+                    }
+                }
+            }
+              
+              .hideDatas {
+                height: 0;
+                animation: hld 0.6s ease-in-out;
+              }
+              
+              @keyframes hld {
+                from {
+                  max-height: 300px;
+                }
+                to {
+                  max-height: 0;
+                }
+              }
+              
+              .showData {
+                height: auto;
+                animation: sld 0.6s ease-in-out;
+              }
+              
+              @keyframes sld {
+                from {
+                  max-height: 0;
+                }
+                to {
+                  max-height: 300px;
+                }
+              }
+              
+              
+        }
+        .menu-3{
+            .heading{
+                font-weight: 700;
+            }
+            ul{
+                width: 300px;
+                padding-left: 0;
+
+                li{
+                    width: 270px;
+                    margin: auto;
+                    list-style: none;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    padding: 10px 15px;
+                    border-radius: 7px;
+                    cursor: pointer;
+                    .icon{
+                        font-size: 22px;
+                        color: gray;
+                    }
+                    p{
+                        font-size: 13px;
+                    }
+                    &:hover {
+                        color: rgb(78, 78, 240);
+                        background-color: rgb(234, 230, 230);
+                    }
+                    &:hover .icon{
+                        color: rgb(78, 78, 240);
+                    }
+                }
+                li.active{
+                    .icon{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

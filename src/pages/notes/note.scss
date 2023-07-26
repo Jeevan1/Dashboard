@@ -1,0 +1,112 @@
+.Notes {
+    &-1 {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-top {
+            &>div {
+                font-weight: 500;
+
+                // padding: 5px;
+                .icon {
+                    font-size: 18px;
+                }
+
+                &>div {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 20px 0;
+                    font-size: 14px;
+                }
+            }
+
+            &-1 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+            }
+
+            &-2 {
+                .note-nav {
+                    padding: 10px;
+                    margin: 5px 0;
+                    transition: 0.3s;
+                    border-radius: 7px;
+                    &:hover{
+                        padding-left: 15px;
+                        background-color: lightgray;
+                    }
+                }
+
+                .active {
+                    background-color: lightgray;
+                    border-radius: 7px;
+                    color: blue;
+                }
+            }
+        }
+
+        &-bottom {
+            font-size: 14px;
+        }
+    }
+    &-2{
+        .note-item{
+            box-shadow: rgba(18, 1, 255, 0.24) 0px 3px 8px;
+            max-height: 250px;
+            &-1{
+                img{
+                    height: 35px;
+                    border-radius: 50%;
+                }
+            }
+            &-2{
+                small{
+                    font-size: 14px;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                }
+            }
+        }
+    }
+}
+
+.add-note-form {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .form-wrapper {
+        width: 30%;
+        position: absolute;
+        background-color: white;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+        .form-control {
+            &:focus{
+                outline: hidden;
+            }
+        }
+        .remove-icon{
+            cursor: pointer;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}

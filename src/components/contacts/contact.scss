@@ -1,0 +1,90 @@
+.contact{
+    &__header{
+        @media(max-width: 680px){
+            button{
+                gap: 1rem !important;
+                .icon{
+                    font-size: 18px !important;
+                }
+                &:first-child{
+                    padding: 5px 10px !important;
+                }
+                span{
+                    font-size: 14px !important;
+                }
+            }
+            .search{
+                input{
+                    width: 100px !important;
+                }
+            }
+        }
+        @media(max-width: 450px){
+            button{
+                gap: 0 !important;
+                padding: 3px 5px !important;
+            }
+            .search{
+                input{
+                    display: none;
+                }
+            }
+        }
+    }
+    &__body{
+        .table-container{
+            max-width: 100%;
+            overflow-x: scroll;
+        }
+            table{
+                width: 100%;
+                thead{
+                    tr{
+                        padding: 15px;
+                        background: rgba($color: rgb(174, 168, 187), $alpha: 0.1);
+                    }
+                }
+            tr{
+                display: flex;
+                justify-content: space-between;
+                gap: 50px;
+                align-items: center;
+                font-size: 14px;
+                padding: 10px;
+                background-color: white;
+                th,td{
+                    width: 100%;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: left;
+                    &:last-child{
+                        justify-content: center;
+                    }
+                }
+                @media(max-width:1000px){
+                    .name{
+                        width: 500px;
+                    }
+
+                }
+                
+                &:nth-child(even){
+                    background-color:rgba($color: rgb(174, 168, 187), $alpha: 0.1);
+                }
+                td{
+                    
+                    img{
+                        height: 35px;
+                        border-radius: 50%;
+                    }
+                    button{
+                        background-color: transparent;
+                    }
+                }
+                
+            }
+        }
+
+    }
+}
